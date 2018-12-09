@@ -1,0 +1,26 @@
+[Unit]
+Description=THANA's distributed currency daemon
+After=network.target
+
+[Service]
+User=thana
+Group=thana
+
+Type=forking
+PIDFile=/var/lib/thanad/thanad.pid
+
+ExecStart=/usr/bin/thanad -daemon -pid=/var/lib/thanad/thanad.pid \
+          -conf=/etc/thana/thana.conf -datadir=/var/lib/thanad
+
+ExecStop=-/usr/bin/thana-cli -conf=/etc/thana/thana.conf \
+         -datadir=/var/lib/thanad stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

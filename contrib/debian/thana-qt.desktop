@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Thana
+Comment=Thana P2P Cryptocurrency
+Comment[fr]=Thana, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Thana, eşten eşe kriptografik sanal para birimi
+Exec=thana-qt %u
+Terminal=false
+Type=Application
+Icon=thana128
+MimeType=x-scheme-handler/thana;
+Categories=Office;Finance;

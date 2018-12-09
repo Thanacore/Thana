@@ -1,0 +1,26 @@
+# /etc/conf.d/thanad: config file for /etc/init.d/thanad
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/thana/thana.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/thanad"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/thanad.pid"
+
+# Where to write thanad data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/thanad"
+
+# User and group to own thanad process
+#BITCOIND_USER="thana"
+#BITCOIND_GROUP="thana"
+
+# Path to thanad executable
+#BITCOIND_BIN="/usr/bin/thanad"
+
+# Nice value to run thanad under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
